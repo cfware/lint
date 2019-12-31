@@ -1,0 +1,37 @@
+{
+	"name": "@cfware/lint",
+	"version": "1.0.0",
+	"description": "My linter for latest Node.js",
+	"scripts": {
+		"release": "standard-version --sign",
+		"test": "node bin.cjs ."
+	},
+	"engines": {
+		"node": ">=13.2.0"
+	},
+	"main": "index.cjs",
+	"bin": {
+		"cfware-lint": "bin.cjs"
+	},
+	"author": "Corey Farrell",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cfware/lint.git"
+	},
+	"homepage": "https://github.com/cfware/lint#readme",
+	"dependencies": {
+		"babel-eslint": "^10.0.3",
+		"eslint": "^6.8.0",
+		"eslint-formatter-pretty": "^3.0.1",
+		"eslint-plugin-eslint-comments": "^3.1.2",
+		"eslint-plugin-import": "^2.19.1",
+		"eslint-plugin-no-use-extend-native": "^0.4.1",
+		"eslint-plugin-node": "^11.0.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-unicorn": "^15.0.1"
+	},
+	"devDependencies": {
+		"standard-version": "^7.0.1"
+	}
+}
