@@ -34,7 +34,10 @@ const importErrors = {
 
 const nodeErrors = {
 	'node/no-unpublished-bin': 2,
-	'node/no-unsupported-features/es-syntax': [2, {ignores: ['modules']}],
+	'node/no-unsupported-features/es-syntax': [2, {ignores: [
+		'modules',
+		'dynamicImport'
+	]}],
 	'node/no-unsupported-features/es-builtins': 2,
 	'node/process-exit-as-throw': 2,
 	'node/no-deprecated-api': 2,
