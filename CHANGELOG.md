@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/cfware/lint/compare/v1.0.1...v1.1.0) (2020-02-03)
+
+
+### Features
+
+* Add unicorn/prefer-replace-all ([b6a6021](https://github.com/cfware/lint/commit/b6a602187600e50a82b2bb720353e932d83ae1e9))
+
+
+### Bug Fixes
+
+* **package:** update eslint-plugin-unicorn to version 16.0.0 ([#1](https://github.com/cfware/lint/issues/1)) ([f471350](https://github.com/cfware/lint/commit/f47135060b8b94c203ec86e8c48412abad5ed49a))
+
 ### [1.0.1](https://github.com/cfware/lint/compare/v1.0.0...v1.0.1) (2020-01-06)
 
 
