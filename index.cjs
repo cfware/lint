@@ -65,7 +65,8 @@ const unicornErrors = {
 	'unicorn/consistent-function-scoping': 0,
 
 	'unicorn/expiring-todo-comments': 2,
-	'unicorn/import-index': [2, {ignoreImports: true}]
+	'unicorn/import-index': [2, {ignoreImports: true}],
+	'unicorn/prefer-replace-all': 2
 };
 
 const eslintCommentErrors = {
