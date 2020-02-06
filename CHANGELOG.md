@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/cfware/lint/compare/v1.1.0...v1.1.1) (2020-02-06)
+
+
+### Bug Fixes
+
+* Pin eslint-plugin-import to 2.20.0 ([2bbde67](https://github.com/cfware/lint/commit/2bbde675f9beeedaca41b10b270c7a06dcaf22bc))
+
 ## [1.1.0](https://github.com/cfware/lint/compare/v1.0.1...v1.1.0) (2020-02-03)
 
 
