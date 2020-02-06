@@ -28,7 +28,8 @@ const importErrors = {
 
 	'import/no-unresolved': 2,
 
-	'import/order': 2,
+	// Too many bugs
+	'import/order': 0,
 	'import/no-unassigned-import': 2
 };
 
