@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/cfware/lint/compare/v1.1.2...v1.1.3) (2020-02-08)
+
+
+### Bug Fixes
+
+* Remove unicorn/prefer-replace-all ([8b50364](https://github.com/cfware/lint/commit/8b50364ae7605d28d4f58ab6b68f1b2d4661e1bc))
+
 ### [1.1.2](https://github.com/cfware/lint/compare/v1.1.1...v1.1.2) (2020-02-06)
 
 
