@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/cfware/lint/compare/v1.1.3...v1.2.0) (2020-02-13)
+
+
+### Features
+
+* Additional rules ([e79eba7](https://github.com/cfware/lint/commit/e79eba77886d512a3832e85dcd9de32ab31ca233))
+
 ### [1.1.3](https://github.com/cfware/lint/compare/v1.1.2...v1.1.3) (2020-02-08)
 
 
