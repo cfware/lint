@@ -100,7 +100,9 @@ const eslintPossibleErrors = {
 	// 		ignoreJSX: 'multi-line'
 	// 	}
 	// ],
+	'no-dupe-else-if': 2,
 	'no-import-assign': 2,
+	'no-setter-return': 2,
 	'no-template-curly-in-string': 2
 };
 
@@ -115,6 +117,7 @@ const eslintBestPractices = {
 	'dot-location': [2, 'property'],
 	'dot-notation': 2,
 	eqeqeq: 2,
+	'grouped-accessor-pairs': 2,
 	'guard-for-in': 2,
 	'no-alert': 2,
 	'no-caller': 2,
@@ -244,6 +247,7 @@ const eslintStyleErrors = {
 		prev: 'multiline-block-like',
 		next: '*'
 	}],
+	'prefer-exponentiation-operator': 2,
 	'prefer-object-spread': 2,
 	'quote-props': [2, 'as-needed'],
 	quotes: [2, 'single'],
