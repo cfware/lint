@@ -40,6 +40,7 @@ const nodeErrors = {
 		'dynamicImport'
 	]}],
 	'node/no-unsupported-features/es-builtins': 2,
+	'node/no-unsupported-features/node-builtins': 2,
 	'node/process-exit-as-throw': 2,
 	'node/no-deprecated-api': 2,
 	'node/prefer-global/buffer': [2, 'always'],
