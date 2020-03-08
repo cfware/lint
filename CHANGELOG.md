@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/cfware/lint/compare/v1.2.0...v1.3.0) (2020-03-08)
+
+
+### Features
+
+* add node/no-unsupported-features/node-builtins ([d0dbb82](https://github.com/cfware/lint/commit/d0dbb827c25f720d33fdd078712a116e307a1d5a))
+
+
+### Bug Fixes
+
+* eslint-comments/no-unused-disable warn instead of error ([4c3ee21](https://github.com/cfware/lint/commit/4c3ee21b40fffa9121d5675afafb013f5ccbc21b))
+* **package:** update eslint-plugin-unicorn to version 17.0.0 ([#2](https://github.com/cfware/lint/issues/2)) ([c36c838](https://github.com/cfware/lint/commit/c36c83891b0c968a4758484f72ed085b3aed7d12))
+
 ## [1.2.0](https://github.com/cfware/lint/compare/v1.1.3...v1.2.0) (2020-02-13)
 
 
