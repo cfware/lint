@@ -1,5 +1,9 @@
 'use strict';
 
+const isCI = require('is-ci');
+
+const ciError = isCI || process.env.STRICT_LINT ? 'error' : 'warn';
+
 const importErrors = {
 	'import/default': 2,
 	'import/export': 2,
@@ -14,14 +18,14 @@ const importErrors = {
 	'import/no-cycle': 2,
 	'import/no-useless-path-segments': 2,
 
-	'import/newline-after-import': 2,
+	'import/newline-after-import': ciError,
 	'import/no-amd': 2,
 	'import/no-duplicates': 2,
 
 	'import/unambiguous': 2,
 	'import/no-commonjs': 2,
 
-	'import/no-extraneous-dependencies': 2,
+	'import/no-extraneous-dependencies': ciError,
 	'import/no-mutable-exports': 2,
 	'import/no-named-as-default-member': 2,
 	'import/no-named-as-default': 2,
@@ -192,79 +196,79 @@ const eslintNodeErrors = {
 };
 
 const eslintStyleErrors = {
-	'array-bracket-newline': [2, 'consistent'],
-	'array-bracket-spacing': [2, 'never'],
-	'array-element-newline': [2, 'consistent'],
-	'block-spacing': 2,
-	'brace-style': [2, '1tbs', {allowSingleLine: false}],
-	camelcase: [2, {properties: 'always'}],
-	'comma-dangle': [2, 'never'],
-	'comma-spacing': [2, {before: false, after: true}],
-	'comma-style': [2, 'last'],
-	'computed-property-spacing': [2, 'never', {enforceForClassMembers: true}],
-	'consistent-this': [2, 'no copies of this'],
-	'eol-last': 2,
-	'func-call-spacing': [2, 'never'],
-	'func-name-matching': [2, {considerPropertyDescriptor: true}],
-	'func-names': [2, 'never'],
-	'function-call-argument-newline': [2, 'consistent'],
-	indent: [2, 'tab', {SwitchCase: 1, ignoreComments: true}],
-	'key-spacing': [2, {beforeColon: false, afterColon: true}],
-	'keyword-spacing': 2,
-	'linebreak-style': [process.platform === 'win32' ? 0 : 2, 'unix'],
-	'lines-between-class-members': [2, 'always', {
+	'array-bracket-newline': [ciError, 'consistent'],
+	'array-bracket-spacing': [ciError, 'never'],
+	'array-element-newline': [ciError, 'consistent'],
+	'block-spacing': ciError,
+	'brace-style': [ciError, '1tbs', {allowSingleLine: false}],
+	camelcase: [ciError, {properties: 'always'}],
+	'comma-dangle': [ciError, 'never'],
+	'comma-spacing': [ciError, {before: false, after: true}],
+	'comma-style': [ciError, 'last'],
+	'computed-property-spacing': [ciError, 'never', {enforceForClassMembers: true}],
+	'consistent-this': [ciError, 'no copies of this'],
+	'eol-last': ciError,
+	'func-call-spacing': [ciError, 'never'],
+	'func-name-matching': [ciError, {considerPropertyDescriptor: true}],
+	'func-names': [ciError, 'never'],
+	'function-call-argument-newline': [ciError, 'consistent'],
+	indent: [ciError, 'tab', {SwitchCase: 1, ignoreComments: true}],
+	'key-spacing': [ciError, {beforeColon: false, afterColon: true}],
+	'keyword-spacing': ciError,
+	'linebreak-style': [process.platform === 'win32' ? 0 : ciError, 'unix'],
+	'lines-between-class-members': [ciError, 'always', {
 		// Workaround to allow class fields to not have lines between them.
 		exceptAfterSingleLine: true
 	}],
 	'max-depth': 1,
 	'max-nested-callbacks': [1, 4],
 	'max-params': [1, {max: 6}],
-	'max-statements-per-line': 2,
-	'new-cap': [2, {newIsCap: true, capIsNew: true}],
-	'new-parens': 2,
-	'newline-per-chained-call': 2,
-	'no-array-constructor': 2,
-	'no-inline-comments': 2,
-	'no-lonely-if': 2,
-	'no-mixed-operators': 2,
-	'no-multi-assign': 2,
-	'no-multiple-empty-lines': [2, {max: 1}],
-	'no-negated-condition': 2,
-	'no-new-object': 2,
+	'max-statements-per-line': ciError,
+	'new-cap': [ciError, {newIsCap: true, capIsNew: true}],
+	'new-parens': ciError,
+	'newline-per-chained-call': ciError,
+	'no-array-constructor': ciError,
+	'no-inline-comments': ciError,
+	'no-lonely-if': ciError,
+	'no-mixed-operators': ciError,
+	'no-multi-assign': ciError,
+	'no-multiple-empty-lines': [ciError, {max: 1}],
+	'no-negated-condition': ciError,
+	'no-new-object': ciError,
 	'no-restricted-syntax': [2, 'WithStatement'],
-	'no-trailing-spaces': 2,
-	'no-unneeded-ternary': 2,
-	'no-whitespace-before-property': 2,
-	'object-curly-spacing': [2, 'never'],
+	'no-trailing-spaces': ciError,
+	'no-unneeded-ternary': ciError,
+	'no-whitespace-before-property': ciError,
+	'object-curly-spacing': [ciError, 'never'],
 	// Disabled because of https://github.com/xojs/eslint-config-xo/issues/27
-	// 'object-property-newline': 2,
-	'one-var': [2, 'never'],
-	'one-var-declaration-per-line': 2,
-	'operator-assignment': [2, 'always'],
-	'operator-linebreak': [2, 'after'],
-	'padded-blocks': [2, 'never', {allowSingleLineBlocks: false}],
-	'padding-line-between-statements': [2, {
+	// 'object-property-newline': ciError,
+	'one-var': [ciError, 'never'],
+	'one-var-declaration-per-line': ciError,
+	'operator-assignment': [ciError, 'always'],
+	'operator-linebreak': [ciError, 'after'],
+	'padded-blocks': [ciError, 'never', {allowSingleLineBlocks: false}],
+	'padding-line-between-statements': [ciError, {
 		blankLine: 'always',
 		prev: 'multiline-block-like',
 		next: '*'
 	}],
-	'prefer-exponentiation-operator': 2,
-	'prefer-object-spread': 2,
-	'quote-props': [2, 'as-needed'],
-	quotes: [2, 'single'],
-	semi: [2, 'always'],
-	'semi-spacing': [2, {before: false, after: true}],
-	'semi-style': [2, 'last'],
-	'space-before-blocks': [2, 'always'],
-	'space-before-function-paren': [2, {
+	'prefer-exponentiation-operator': ciError,
+	'prefer-object-spread': ciError,
+	'quote-props': [ciError, 'as-needed'],
+	quotes: [ciError, 'single'],
+	semi: [ciError, 'always'],
+	'semi-spacing': [ciError, {before: false, after: true}],
+	'semi-style': [ciError, 'last'],
+	'space-before-blocks': [ciError, 'always'],
+	'space-before-function-paren': [ciError, {
 		anonymous: 'always',
 		named: 'never',
 		asyncArrow: 'always'
 	}],
-	'space-in-parens': [2, 'never'],
-	'space-infix-ops': 2,
-	'space-unary-ops': 2,
-	'spaced-comment': [2, 'always', {
+	'space-in-parens': [ciError, 'never'],
+	'space-infix-ops': ciError,
+	'space-unary-ops': ciError,
+	'spaced-comment': [ciError, 'always', {
 		line: {
 			exceptions: ['-', '+', '*'],
 			markers: ['!', '/', '=>']
@@ -275,15 +279,15 @@ const eslintStyleErrors = {
 			balanced: true
 		}
 	}],
-	'switch-colon-spacing': [2, {after: true, before: false}],
-	'template-tag-spacing': [2, 'never'],
-	'unicode-bom': [2, 'never']
+	'switch-colon-spacing': [ciError, {after: true, before: false}],
+	'template-tag-spacing': [ciError, 'never'],
+	'unicode-bom': [ciError, 'never']
 };
 
 const eslintES6 = {
-	'arrow-parens': [2, 'as-needed'],
-	'arrow-spacing': [2, {before: true, after: true}],
-	'generator-star-spacing': [2, 'both'],
+	'arrow-parens': [ciError, 'as-needed'],
+	'arrow-spacing': [ciError, {before: true, after: true}],
+	'generator-star-spacing': [ciError, 'both'],
 	'no-restricted-imports': [2, 'domain', 'freelist', 'smalloc', 'sys', 'colors'],
 	'no-useless-computed-key': 2,
 	'no-useless-constructor': 2,
