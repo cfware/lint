@@ -1,6 +1,6 @@
 # @cfware/lint
 
-[![Travis CI][travis-image]][travis-url]
+![Tests][tests-status]
 [![Greenkeeper badge][gk-image]](https://greenkeeper.io/)
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -16,8 +16,7 @@ proposed the change.
 
 [npm-image]: https://img.shields.io/npm/v/@cfware/lint.svg
 [npm-url]: https://npmjs.org/package/@cfware/lint
-[travis-image]: https://travis-ci.org/cfware/lint.svg?branch=master
-[travis-url]: https://travis-ci.org/cfware/lint
+[tests-status]: https://github.com/cfware/lint/workflows/Tests/badge.svg
 [gk-image]: https://badges.greenkeeper.io/cfware/lint.svg
 [downloads-image]: https://img.shields.io/npm/dm/@cfware/lint.svg
 [downloads-url]: https://npmjs.org/package/@cfware/lint
