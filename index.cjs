@@ -71,7 +71,9 @@ const unicornErrors = {
 	'unicorn/consistent-function-scoping': 0,
 
 	'unicorn/expiring-todo-comments': 2,
-	'unicorn/import-index': [2, {ignoreImports: true}]
+	'unicorn/import-index': [2, {ignoreImports: true}],
+	// This rule is a bit much
+	'unicorn/no-null': 0
 };
 
 const eslintCommentErrors = {
