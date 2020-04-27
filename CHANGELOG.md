@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/cfware/lint/compare/v1.4.0...v1.4.1) (2020-04-27)
+
+
+### Bug Fixes
+
+* Update dependencies ([ad8c059](https://github.com/cfware/lint/commit/ad8c05991b465e0929c96aee321a76378e13437d))
+* **package:** update eslint-plugin-unicorn to version 18.0.0 ([#3](https://github.com/cfware/lint/issues/3)) ([a41eddc](https://github.com/cfware/lint/commit/a41eddc680f149dd0c3cbf34069e5f24220d8c33))
+
 ## [1.4.0](https://github.com/cfware/lint/compare/v1.3.0...v1.4.0) (2020-03-15)
 
 
