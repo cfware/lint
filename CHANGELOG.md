@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/cfware/lint/compare/v1.4.1...v1.4.2) (2020-04-27)
+
+
+### Bug Fixes
+
+* Disable unicorn/no-null ([720fa34](https://github.com/cfware/lint/commit/720fa340313936a3f1f05d8da715e7f762b28917))
+
 ### [1.4.1](https://github.com/cfware/lint/compare/v1.4.0...v1.4.1) (2020-04-27)
 
 
