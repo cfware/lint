@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/cfware/lint/compare/v1.4.2...v1.4.3) (2020-05-04)
+
+
+### Bug Fixes
+
+* Disable unicorn/no-fn-reference-in-iterator ([dfb542d](https://github.com/cfware/lint/commit/dfb542d9bb87c4896ce0c89cb63e04799281db29))
+
 ### [1.4.2](https://github.com/cfware/lint/compare/v1.4.1...v1.4.2) (2020-04-27)
 
 
