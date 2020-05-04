@@ -73,7 +73,9 @@ const unicornErrors = {
 	'unicorn/expiring-todo-comments': 2,
 	'unicorn/import-index': [2, {ignoreImports: true}],
 	// This rule is a bit much
-	'unicorn/no-null': 0
+	'unicorn/no-null': 0,
+	// Block on https://github.com/sindresorhus/eslint-plugin-unicorn/issues/717
+	'unicorn/no-fn-reference-in-iterator': 0
 };
 
 const eslintCommentErrors = {
