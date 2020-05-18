@@ -3,11 +3,10 @@
 	"version": "1.4.3",
 	"description": "My linter for latest Node.js",
 	"scripts": {
-		"release": "standard-version --sign",
 		"test": "node bin.cjs ."
 	},
 	"engines": {
-		"node": ">=13.2.0"
+		"node": ">=10"
 	},
 	"main": "index.cjs",
 	"bin": {
@@ -33,6 +32,5 @@
 		"is-ci": "^2.0.0"
 	},
 	"devDependencies": {
-		"standard-version": "^8.0.0"
 	}
 }
