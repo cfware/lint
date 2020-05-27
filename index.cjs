@@ -1,8 +1,27 @@
 'use strict';
 
+const path = require('path');
+const fs = require('fs');
+
 const isCI = require('is-ci');
 
 const ciError = isCI || process.env.STRICT_LINT ? 'error' : 'warn';
+
+function getUnresolvedOptions() {
+	try {
+		const packageJSON = JSON.parse(fs.readFileSync(path.resolve('package.json'), 'utf8'));
+		if ('exports' in packageJSON === false || 'name' in packageJSON === false) {
+			return {};
+		}
+
+		return {
+			ignore: [packageJSON.name]
+		};
+	} catch (_) {
+	}
+
+	return {};
+}
 
 const importErrors = {
 	'import/default': 2,
@@ -30,7 +49,7 @@ const importErrors = {
 	'import/no-named-as-default-member': 2,
 	'import/no-named-as-default': 2,
 
-	'import/no-unresolved': 2,
+	'import/no-unresolved': [2, getUnresolvedOptions()],
 
 	// Too many bugs
 	'import/order': 0,
