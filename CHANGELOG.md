@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://www.github.com/cfware/lint/compare/v1.4.3...v1.5.0) (2020-05-27)
+
+
+### Features
+
+* Prevent no-unresolved from reporting self-resolution. ([200bdbd](https://www.github.com/cfware/lint/commit/200bdbd911a25042bc91eaf418e1958ea935a02b))
+
 ### [1.4.3](https://github.com/cfware/lint/compare/v1.4.2...v1.4.3) (2020-05-04)
 
 
