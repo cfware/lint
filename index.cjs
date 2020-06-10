@@ -364,7 +364,10 @@ module.exports = {
 	],
 	env: {
 		node: true,
-		es6: true
+		es2020: true
+	},
+	globals: {
+		globalThis: true
 	},
 	reportUnusedDisableDirectives: true,
 	plugins: [
