@@ -17,7 +17,7 @@ function getUnresolvedOptions() {
 		return {
 			ignore: [packageJSON.name]
 		};
-	} catch (_) {
+	} catch {
 	}
 
 	return {};
