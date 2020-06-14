@@ -210,13 +210,14 @@ const eslintVariables = {
 	'no-undef-init': 2
 };
 
+const restrictedModules = ['domain', 'freelist', 'smalloc', 'sys', 'colors'];
 const eslintNodeErrors = {
 	'handle-callback-err': 1,
 	'no-buffer-constructor': 2,
 	'no-mixed-requires': [2, {grouping: true, allowCall: true}],
 	'no-new-require': 2,
 	'no-path-concat': 2,
-	'no-restricted-modules': [2, 'domain', 'freelist', 'smalloc', 'sys', 'colors']
+	'no-restricted-modules': [2, ...restrictedModules]
 };
 
 const eslintStyleErrors = {
@@ -312,7 +313,7 @@ const eslintES6 = {
 	'arrow-parens': [ciError, 'as-needed'],
 	'arrow-spacing': [ciError, {before: true, after: true}],
 	'generator-star-spacing': [ciError, 'both'],
-	'no-restricted-imports': [2, 'domain', 'freelist', 'smalloc', 'sys', 'colors'],
+	'no-restricted-imports': [2, ...restrictedModules],
 	'no-useless-computed-key': 2,
 	'no-useless-constructor': 2,
 	'no-useless-rename': 2,
