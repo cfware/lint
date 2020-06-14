@@ -1,26 +1,19 @@
 'use strict';
-
-const path = require('path');
-const fs = require('fs');
-
 const isCI = require('is-ci');
+const packageJSON = require('./package-json.cjs');
+const conditionalRule = require('./conditional-rule.cjs');
 
 const ciError = isCI || process.env.STRICT_LINT ? 'error' : 'warn';
+const nodeVersionRange = {version: packageJSON.engines.node};
 
 function getUnresolvedOptions() {
-	try {
-		const packageJSON = JSON.parse(fs.readFileSync(path.resolve('package.json'), 'utf8'));
-		if ('exports' in packageJSON === false || 'name' in packageJSON === false) {
-			return {};
-		}
-
-		return {
-			ignore: [packageJSON.name]
-		};
-	} catch {
+	if ('exports' in packageJSON === false || 'name' in packageJSON === false) {
+		return {};
 	}
 
-	return {};
+	return {
+		ignore: [packageJSON.name]
+	};
 }
 
 const importErrors = {
@@ -58,23 +51,26 @@ const importErrors = {
 
 const nodeErrors = {
 	'node/no-unpublished-bin': 2,
-	'node/no-unsupported-features/es-syntax': [2, {ignores: [
-		'modules',
-		'dynamicImport'
-	]}],
-	'node/no-unsupported-features/es-builtins': 2,
-	'node/no-unsupported-features/node-builtins': 2,
+	'node/no-unsupported-features/es-syntax': [2, {
+		ignores: [
+			'modules',
+			'dynamicImport'
+		],
+		...nodeVersionRange
+	}],
+	'node/no-unsupported-features/es-builtins': [2, nodeVersionRange],
+	'node/no-unsupported-features/node-builtins': [2, nodeVersionRange],
 	'node/process-exit-as-throw': 2,
-	'node/no-deprecated-api': 2,
+	'node/no-deprecated-api': [2, nodeVersionRange],
 	'node/prefer-global/buffer': [2, 'always'],
 	'node/prefer-global/console': [2, 'always'],
 	'node/prefer-global/process': [2, 'always'],
-	'node/prefer-global/text-decoder': [2, 'always'],
-	'node/prefer-global/text-encoder': [2, 'always'],
+	...conditionalRule('11.0.0', 'node/prefer-global/text-decoder', [2, 'always']),
+	...conditionalRule('11.0.0', 'node/prefer-global/text-encoder', [2, 'always']),
 	'node/prefer-global/url-search-params': [2, 'always'],
 	'node/prefer-global/url': [2, 'always'],
-	'node/prefer-promises/dns': 2,
-	'node/prefer-promises/fs': 2
+	...conditionalRule('11.14.0', 'node/prefer-promises/dns', 2),
+	...conditionalRule('11.14.0', 'node/prefer-promises/fs', 2)
 };
 
 const unicornErrors = {
@@ -94,7 +90,10 @@ const unicornErrors = {
 	// This rule is a bit much
 	'unicorn/no-null': 0,
 	// Block on https://github.com/sindresorhus/eslint-plugin-unicorn/issues/717
-	'unicorn/no-fn-reference-in-iterator': 0
+	'unicorn/no-fn-reference-in-iterator': 0,
+	...conditionalRule('11.0.0', 'unicorn/prefer-flat-map', 2),
+	// Conditionally enable when supported
+	'unicorn/prefer-replace-all': 0
 };
 
 const eslintCommentErrors = {
