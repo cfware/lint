@@ -1,5 +1,6 @@
 'use strict';
 const isCI = require('is-ci');
+const confusingBrowserGlobals = require('confusing-browser-globals');
 const packageJSON = require('./package-json.cjs');
 const conditionalRule = require('./conditional-rule.cjs');
 
@@ -204,7 +205,7 @@ const eslintVariables = {
 
 	// Add to eslint:recommended
 	'no-label-var': 2,
-	'no-restricted-globals': [2, 'event'],
+	'no-restricted-globals': [2, ...confusingBrowserGlobals],
 	'no-undef-init': 2
 };
 
