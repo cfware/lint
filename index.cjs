@@ -95,7 +95,10 @@ const unicornErrors = {
 	'unicorn/no-fn-reference-in-iterator': 0,
 	...conditionalRule('11.0.0', 'unicorn/prefer-flat-map', 2),
 	// Conditionally enable when supported
-	'unicorn/prefer-replace-all': 0
+	'unicorn/prefer-replace-all': 0,
+
+	// Covered by node/no-deprecated-api
+	'unicorn/no-new-buffer': 0
 };
 
 const eslintCommentErrors = {
@@ -213,7 +216,6 @@ const eslintVariables = {
 const restrictedModules = ['domain', 'freelist', 'smalloc', 'sys', 'colors'];
 const eslintNodeErrors = {
 	'handle-callback-err': 1,
-	'no-buffer-constructor': 2,
 	'no-mixed-requires': [2, {grouping: true, allowCall: true}],
 	'no-new-require': 2,
 	'no-path-concat': 2,
