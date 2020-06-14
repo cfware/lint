@@ -85,6 +85,7 @@ const unicornErrors = {
 
 	// TODO: Remove this override when the rule is more stable.
 	'unicorn/consistent-function-scoping': 0,
+	'unicorn/custom-error-definition': 2,
 
 	'unicorn/expiring-todo-comments': 2,
 	'unicorn/import-index': [2, {ignoreImports: true}],
