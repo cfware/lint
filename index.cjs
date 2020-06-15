@@ -1,4 +1,5 @@
 'use strict';
+const {builtinModules} = require('module');
 const isCI = require('is-ci');
 const confusingBrowserGlobals = require('confusing-browser-globals');
 const packageJSON = require('./package-json.cjs');
@@ -50,7 +51,18 @@ const importErrors = {
 	'import/no-unassigned-import': 2
 };
 
+const restrictedModules = [
+	'domain',
+	'sys',
+	...builtinModules.filter(name => name.startsWith('_'))
+];
+
 const nodeErrors = {
+	'node/handle-callback-err': 1,
+	'node/no-new-require': 2,
+	'node/no-path-concat': 2,
+	'node/no-restricted-import': [2, restrictedModules],
+	'node/no-restricted-require': [2, restrictedModules],
 	'node/no-unpublished-bin': 2,
 	'node/no-unsupported-features/es-syntax': [2, {
 		ignores: [
@@ -132,15 +144,12 @@ const eslintPossibleErrors = {
 	// 		ignoreJSX: 'multi-line'
 	// 	}
 	// ],
-	'no-dupe-else-if': 2,
-	'no-import-assign': 2,
-	'no-setter-return': 2,
 	'no-template-curly-in-string': 2
 };
 
 const eslintBestPractices = {
 	'accessor-pairs': [2, {enforceForClassMembers: true}],
-	'array-callback-return': 2,
+	'array-callback-return': [2, {allowImplicit: true}],
 	'block-scoped-var': 2,
 	complexity: 1,
 	curly: 2,
@@ -149,7 +158,7 @@ const eslintBestPractices = {
 	'dot-location': [2, 'property'],
 	'dot-notation': 2,
 	eqeqeq: 2,
-	'grouped-accessor-pairs': 2,
+	'grouped-accessor-pairs': [2, 'getBeforeSet'],
 	'guard-for-in': 2,
 	'no-alert': 2,
 	'no-caller': 2,
@@ -211,15 +220,6 @@ const eslintVariables = {
 	'no-label-var': 2,
 	'no-restricted-globals': [2, ...confusingBrowserGlobals],
 	'no-undef-init': 2
-};
-
-const restrictedModules = ['domain', 'freelist', 'smalloc', 'sys', 'colors'];
-const eslintNodeErrors = {
-	'handle-callback-err': 1,
-	'no-mixed-requires': [2, {grouping: true, allowCall: true}],
-	'no-new-require': 2,
-	'no-path-concat': 2,
-	'no-restricted-modules': [2, ...restrictedModules]
 };
 
 const eslintStyleErrors = {
@@ -315,8 +315,7 @@ const eslintES6 = {
 	'arrow-parens': [ciError, 'as-needed'],
 	'arrow-spacing': [ciError, {before: true, after: true}],
 	'generator-star-spacing': [ciError, 'both'],
-	'no-restricted-imports': [2, ...restrictedModules],
-	'no-useless-computed-key': 2,
+	'no-useless-computed-key': [2, {enforceForClassMembers: true}],
 	'no-useless-constructor': 2,
 	'no-useless-rename': 2,
 	'no-var': 2,
@@ -406,7 +405,6 @@ module.exports = {
 		...eslintPossibleErrors,
 		...eslintBestPractices,
 		...eslintVariables,
-		...eslintNodeErrors,
 		...eslintStyleErrors,
 		...eslintES6,
 
