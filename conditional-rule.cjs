@@ -5,10 +5,17 @@ const semver = require('semver');
 
 const packageMinimumVersion = semver.minVersion(packageJSON.engines.node);
 
+function conditionalValue(minimumVersion, ifMet, ifUnmet) {
+	return semver.lte(minimumVersion, packageMinimumVersion) ? ifMet : ifUnmet;
+}
+
 function conditionalRule(minimumVersion, ruleName, options) {
 	return {
-		[ruleName]: semver.lte(minimumVersion, packageMinimumVersion) ? options : 0
+		[ruleName]: conditionalValue(minimumVersion, options, 0)
 	};
 }
 
-module.exports = conditionalRule;
+module.exports = {
+	conditionalValue,
+	conditionalRule
+};

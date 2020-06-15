@@ -2,8 +2,9 @@
 const {builtinModules} = require('module');
 const isCI = require('is-ci');
 const confusingBrowserGlobals = require('confusing-browser-globals');
+
 const packageJSON = require('./package-json.cjs');
-const conditionalRule = require('./conditional-rule.cjs');
+const {conditionalValue, conditionalRule} = require('./conditional-rule.cjs');
 
 const ciError = isCI || process.env.STRICT_LINT ? 'error' : 'warn';
 const nodeVersionRange = {version: packageJSON.engines.node};
@@ -55,7 +56,11 @@ const importErrors = {
 const restrictedModules = [
 	'domain',
 	'sys',
-	...builtinModules.filter(name => name.startsWith('_'))
+	...builtinModules.filter(name => name.startsWith('_')),
+	...conditionalValue('14.0.0', [], [{
+		name: 'fs/promises',
+		message: 'Please use "`require(\'fs\').promises`" until Node.js 14.0.0'
+	}])
 ];
 
 const nodeErrors = {
