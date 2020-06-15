@@ -1,18 +1,23 @@
 #!/usr/bin/env node
 const isCI = require('is-ci');
-const eslint = require('eslint');
-const formatterPretty = require('eslint-formatter-pretty');
+const {ESLint} = require('eslint');
 
 const baseConfig = require('./index.cjs');
 
-const formatter = isCI ? eslint.CLIEngine.getFormatter() : formatterPretty;
+(async () => {
+	try {
+		const eslint = new ESLint({
+			baseConfig,
+			extensions: ['.js', '.cjs', '.mjs']
+		});
 
-const engine = new eslint.CLIEngine({
-	baseConfig,
-	extensions: ['.js', '.cjs', '.mjs']
-});
+		const formatter = await eslint.loadFormatter(isCI ? 'stylish' : 'pretty');
+		const results = await eslint.lintFiles(process.argv.slice(2));
 
-const report = engine.executeOnFiles(process.argv.slice(2));
-
-process.stdout.write(formatter(report.results));
-process.exit(report.errorCount === 0 ? 0 : 1);
+		process.stdout.write(formatter.format(results));
+		process.exit(results.some(result => result.errorCount !== 0) ? 1 : 0);
+	} catch (error) {
+		console.error(error);
+		process.exit(1);
+	}
+})();
