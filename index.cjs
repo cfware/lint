@@ -43,6 +43,7 @@ const importErrors = {
 	'import/no-mutable-exports': 2,
 	'import/no-named-as-default-member': 2,
 	'import/no-named-as-default': 2,
+	'import/no-named-default': 2,
 
 	'import/no-unresolved': [2, getUnresolvedOptions()],
 
