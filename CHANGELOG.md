@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/cfware/lint/compare/v1.5.0...v2.0.0) (2020-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* Upgrade eslint-plugin-unicorn to 21.0.0
+
+### Features
+
+* Enable import/no-named-default ([c4bc3a0](https://github.com/cfware/lint/commit/c4bc3a0c295c9f869b6bf841a417095d98509351))
+* Enable unicorn/custom-error-definition ([6aa8049](https://github.com/cfware/lint/commit/6aa804980c59d1be15af01a531a3d309efd60f54))
+* Restrict fs/promises to Node.js 14 ([322de76](https://github.com/cfware/lint/commit/322de76adb9c4a4f206744cd9b0b705412cc6514))
+* Upgrade eslint-plugin-unicorn to 21.0.0 ([faa79cc](https://github.com/cfware/lint/commit/faa79cc72c4ba2d817e6861ee95cc1110eef0018))
+* Upgrade to eslint 7 ([6ec6c3d](https://github.com/cfware/lint/commit/6ec6c3d85595e5a2737e15a8192cfa5f2c8e4b0f))
+
+
+### Bug Fixes
+
+* Correct handling of Node.js version based rules ([591ae3f](https://github.com/cfware/lint/commit/591ae3f4b91e0f694d3145ed8563f82112b5e8c5))
+* Expand restricted globals with confusing-browser-globals ([7957b93](https://github.com/cfware/lint/commit/7957b93d13b106d62e81f01d1dd1c9df9f5fb49d))
+* Remove redundant reporting of `new Buffer()` ([0177dc4](https://github.com/cfware/lint/commit/0177dc4974f38b299fc8a0d53209ab3544856d69))
+* Use env es2020, enable globalThis ([676baf0](https://github.com/cfware/lint/commit/676baf090d52810eb004d33106327bc32f6e04d2))
+
 ## [1.5.0](https://www.github.com/cfware/lint/compare/v1.4.3...v1.5.0) (2020-05-27)
 
 
