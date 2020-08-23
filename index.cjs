@@ -140,6 +140,7 @@ const eslintPossibleErrors = {
 	// Override eslint:recommended
 	'no-empty': [2, {allowEmptyCatch: true}],
 	'require-atomic-updates': 0,
+	'getter-return': [2, {allowImplicit: true}],
 
 	// Add to eslint:recommended
 	'no-await-in-loop': 2,
