@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://www.github.com/cfware/lint/compare/v2.0.0...v2.0.1) (2020-08-23)
+
+
+### Bug Fixes
+
+* Allow implicit undefined getter-return ([e6ef857](https://www.github.com/cfware/lint/commit/e6ef857fad8d116dc1911253d845267df983085b))
+
 ## [2.0.0](https://github.com/cfware/lint/compare/v1.5.0...v2.0.0) (2020-08-18)
 
 
