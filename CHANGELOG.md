@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://www.github.com/cfware/lint/compare/v2.0.1...v2.0.2) (2020-09-21)
+
+
+### Bug Fixes
+
+* Allow use of `self` global for service workers ([485f6ac](https://www.github.com/cfware/lint/commit/485f6acdf34eb900baa1b6f604464ef77cf5294f))
+
 ### [2.0.1](https://www.github.com/cfware/lint/compare/v2.0.0...v2.0.1) (2020-08-23)
 
 
