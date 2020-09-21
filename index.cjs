@@ -225,7 +225,7 @@ const eslintVariables = {
 
 	// Add to eslint:recommended
 	'no-label-var': 2,
-	'no-restricted-globals': [2, ...confusingBrowserGlobals],
+	'no-restricted-globals': [2, ...confusingBrowserGlobals.filter(value => value !== 'self')],
 	'no-undef-init': 2
 };
 
