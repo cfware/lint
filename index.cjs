@@ -262,7 +262,7 @@ const eslintStyleErrors = {
 	'new-parens': ciError,
 	'newline-per-chained-call': ciError,
 	'no-array-constructor': ciError,
-	'no-inline-comments': ciError,
+	'no-inline-comments': [ciError, {ignorePattern: '^\\s*istanbul\\s'}],
 	'no-lonely-if': ciError,
 	'no-mixed-operators': ciError,
 	'no-multi-assign': ciError,
