@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://www.github.com/cfware/lint/compare/v2.0.3...v2.0.4) (2020-10-19)
+
+
+### Bug Fixes
+
+* Pin resolve@1.17.0 to silence deprecation warning ([79b45da](https://www.github.com/cfware/lint/commit/79b45da965440c12a2eb2c6c709ba497f5c4129c))
+
 ### [2.0.3](https://www.github.com/cfware/lint/compare/v2.0.2...v2.0.3) (2020-09-27)
 
 
