@@ -361,10 +361,23 @@ const eslintES6 = {
 };
 
 module.exports = {
-	parser: 'babel-eslint',
+	parser: '@babel/eslint-parser',
 	parserOptions: {
-		ecmaVersion: 2020,
-		sourceType: 'module'
+		ecmaVersion: 2021,
+		sourceType: 'module',
+		allowImportExportEverywhere: false,
+		requireConfigFile: false,
+		babelOptions: {
+			parserOpts: {
+				plugins: [
+					'classProperties',
+					'classPrivateProperties',
+					'classPrivateMethods',
+					'exportDefaultFrom',
+					'topLevelAwait'
+				]
+			}
+		}
 	},
 	ignorePatterns: [
 		'coverage/',
