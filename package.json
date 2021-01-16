@@ -33,7 +33,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^21.0.0",
     "is-ci": "^2.0.0",
-    "resolve": "=1.17.0",
     "semver": "^7.3.2"
   }
 }
