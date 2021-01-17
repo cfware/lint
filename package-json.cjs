@@ -1,9 +1,9 @@
 'use strict';
-const path = require('path');
-const fs = require('fs');
+const path = require('node:path');
+const fs = require('node:fs');
 
 function loadPackageJSON() {
-	const engines = {node: '>=10.0.0'};
+	const engines = {node: '>=14.0.0'};
 
 	try {
 		const packageJSON = {

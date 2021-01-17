@@ -1,5 +1,5 @@
 'use strict';
-const {builtinModules} = require('module');
+const {builtinModules} = require('node:module');
 const isCI = require('is-ci');
 const confusingBrowserGlobals = require('confusing-browser-globals');
 
@@ -110,13 +110,15 @@ const unicornErrors = {
 	// This rule is a bit much
 	'unicorn/no-null': 0,
 	// Block on https://github.com/sindresorhus/eslint-plugin-unicorn/issues/717
-	'unicorn/no-fn-reference-in-iterator': 0,
+	'unicorn/no-array-callback-reference': 0,
 	...conditionalRule('11.0.0', 'unicorn/prefer-flat-map', 2),
-	// Conditionally enable when supported
-	'unicorn/prefer-replace-all': 0,
+	...conditionalRule('15.0.0', 'unicorn/prefer-replace-all', 2),
 
 	// Covered by node/no-deprecated-api
-	'unicorn/no-new-buffer': 0
+	'unicorn/no-new-buffer': 0,
+
+	'unicorn/prefer-top-level-await': 0,
+	'unicorn/prefer-export-from': [2, {ignoreUsedVariables: true}]
 };
 
 const eslintCommentErrors = {
