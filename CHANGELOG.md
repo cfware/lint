@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.3](https://github.com/cfware/lint/compare/v3.0.2...v3.0.3) (2022-08-13)
+
+
+### Bug Fixes
+
+* Disable check for Infinity ([ddcd4d4](https://github.com/cfware/lint/commit/ddcd4d4109b9e43134fe26ea7752c35a1280869e))
+
 ### [3.0.2](https://github.com/cfware/lint/compare/v3.0.1...v3.0.2) (2022-08-13)
 
 
