@@ -119,6 +119,8 @@ const unicornErrors = {
 	'unicorn/no-new-buffer': 0,
 
 	'unicorn/prefer-export-from': [2, {ignoreUsedVariables: true}],
+	'unicorn/prefer-number-properties': [2, {checkInfinity: true}],
+
 	'unicorn/prefer-top-level-await': 0,
 
 	// No thank you
