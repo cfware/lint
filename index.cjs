@@ -117,8 +117,11 @@ const unicornErrors = {
 	// Covered by node/no-deprecated-api
 	'unicorn/no-new-buffer': 0,
 
+	'unicorn/prefer-export-from': [2, {ignoreUsedVariables: true}],
 	'unicorn/prefer-top-level-await': 0,
-	'unicorn/prefer-export-from': [2, {ignoreUsedVariables: true}]
+
+	// No thank you
+	'unicorn/numeric-separators-style': 0
 };
 
 const eslintCommentErrors = {
