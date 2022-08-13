@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/cfware/lint/compare/v3.0.1...v3.0.2) (2022-08-13)
+
+
+### Bug Fixes
+
+* Do not block use of fn variable abbreviation ([f1bae1c](https://github.com/cfware/lint/commit/f1bae1cf710ff3ab09872245deb2d4bc4fd8ffaf))
+
 ### [3.0.1](https://github.com/cfware/lint/compare/v3.0.0...v3.0.1) (2022-08-13)
 
 
