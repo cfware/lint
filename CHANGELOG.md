@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/cfware/lint/compare/v3.0.0...v3.0.1) (2022-08-13)
+
+
+### Bug Fixes
+
+* Disable unicorn/numeric-separators-style ([9e0fcdd](https://github.com/cfware/lint/commit/9e0fcdd41c409bf705099de647f1470dfc2ebc05))
+
 ## [3.0.0](https://github.com/cfware/lint/compare/v2.0.6...v3.0.0) (2022-08-13)
 
 
