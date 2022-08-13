@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/cfware/lint/compare/v2.0.6...v3.0.0) (2022-08-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Upgrade dependencies
+
+### Features
+
+* Upgrade dependencies ([797eed2](https://github.com/cfware/lint/commit/797eed2c3277ec5ba3ba4bfc8704ef420c14738f))
+
 ### [2.0.6](https://github.com/cfware/lint/compare/v2.0.5...v2.0.6) (2021-01-16)
 
 
