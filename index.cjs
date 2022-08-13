@@ -97,7 +97,8 @@ const unicornErrors = {
 		checkProperties: false,
 		checkFilenames: false,
 		replacements: {
-			args: false
+			args: false,
+			fn: false
 		}
 	}],
 
