@@ -123,6 +123,9 @@ const unicornErrors = {
 
 	'unicorn/prefer-top-level-await': 0,
 
+	// Breaks Readable#push, don't want to ignore instance names
+	'unicorn/no-array-push-push': 0,
+
 	// No thank you
 	'unicorn/numeric-separators-style': 0
 };
