@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.5](https://github.com/cfware/lint/compare/v3.0.4...v3.0.5) (2022-08-14)
+
+
+### Bug Fixes
+
+* Disable unicorn/no-array-push-push ([c9a734d](https://github.com/cfware/lint/commit/c9a734d2052f642e14c8a6af1e62730235233456))
+
 ### [3.0.4](https://github.com/cfware/lint/compare/v3.0.3...v3.0.4) (2022-08-13)
 
 
