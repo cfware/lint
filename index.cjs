@@ -127,7 +127,10 @@ const unicornErrors = {
 	'unicorn/no-array-push-push': 0,
 
 	// No thank you
-	'unicorn/numeric-separators-style': 0
+	'unicorn/numeric-separators-style': 0,
+	'unicorn/consistent-destructuring': 0,
+	'unicorn/prefer-array-flat': 0,
+	'unicorn/prefer-spread': 0
 };
 
 const eslintCommentErrors = {
