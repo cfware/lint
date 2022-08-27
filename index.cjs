@@ -10,12 +10,15 @@ const ciError = isCI || process.env.STRICT_LINT ? 'error' : 'warn';
 const nodeVersionRange = {version: packageJSON.engines.node};
 
 function getUnresolvedOptions() {
+	// No 'main', eslint-plugin-import doesn't understand this module.
+	const defaultIgnore = ['got'];
+
 	if ('exports' in packageJSON === false || 'name' in packageJSON === false) {
-		return {};
+		return {ignore: defaultIgnore};
 	}
 
 	return {
-		ignore: [packageJSON.name]
+		ignore: [...defaultIgnore, packageJSON.name]
 	};
 }
 
