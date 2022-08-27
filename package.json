@@ -1,6 +1,6 @@
 {
   "name": "@cfware/lint",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "My linter for latest Node.js",
   "scripts": {
     "test": "node bin.cjs ."
