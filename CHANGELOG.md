@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.6](https://github.com/cfware/lint/compare/v3.0.5...v3.0.6) (2022-08-27)
+
+
+### Bug Fixes
+
+* Disable some more problematic unicorn rules ([aaa158d](https://github.com/cfware/lint/commit/aaa158ddf0278f52ef1460bd9e697d29a252021c))
+
 ### [3.0.5](https://github.com/cfware/lint/compare/v3.0.4...v3.0.5) (2022-08-14)
 
 
