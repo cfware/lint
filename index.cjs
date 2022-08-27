@@ -133,7 +133,10 @@ const unicornErrors = {
 	'unicorn/numeric-separators-style': 0,
 	'unicorn/consistent-destructuring': 0,
 	'unicorn/prefer-array-flat': 0,
-	'unicorn/prefer-spread': 0
+	'unicorn/prefer-spread': 0,
+
+	// Use tabs
+	'unicorn/template-indent': [2, {indent: '\t'}]
 };
 
 const eslintCommentErrors = {
