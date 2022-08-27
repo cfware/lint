@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.7](https://github.com/cfware/lint/compare/v3.0.6...v3.0.7) (2022-08-27)
+
+
+### Bug Fixes
+
+* Avoid false positive for import/no-unresolved for got ([73b370d](https://github.com/cfware/lint/commit/73b370d4188b8f761b9aeeec277c4da419492d7a))
+
 ### [3.0.6](https://github.com/cfware/lint/compare/v3.0.5...v3.0.6) (2022-08-27)
 
 
