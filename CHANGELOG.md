@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.2](https://github.com/cfware/lint/compare/v4.0.1...v4.0.2) (2023-10-15)
+
+
+### Bug Fixes
+
+* unicorn/template-indent 4 spaces ([7b7166d](https://github.com/cfware/lint/commit/7b7166dcedd87790ed63bb64546a5887d1577531))
+
 ## [4.0.1](https://github.com/cfware/lint/compare/v4.0.0...v4.0.1) (2023-10-15)
 
 
