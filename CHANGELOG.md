@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.1](https://github.com/cfware/lint/compare/v4.0.0...v4.0.1) (2023-10-15)
+
+
+### Bug Fixes
+
+* avoid unicorn/switch-case-braces ([ef8144c](https://github.com/cfware/lint/commit/ef8144c77f7f334ea5383c1541d5c3aef8c9e8da))
+
 ## [4.0.0](https://github.com/cfware/lint/compare/v3.0.8...v4.0.0) (2023-10-15)
 
 
