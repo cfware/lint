@@ -130,6 +130,7 @@ const unicornErrors = {
     'unicorn/prefer-array-flat': 0,
     'unicorn/prefer-spread': 0,
     'unicorn/require-array-join-separator': 0,
+    'unicorn/switch-case-braces': [2, 'avoid'],
 
     // Use tabs
     'unicorn/template-indent': [2, {indent: '\t'}]
