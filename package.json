@@ -1,38 +1,39 @@
 {
-  "name": "@cfware/lint",
-  "version": "3.0.8",
-  "description": "My linter for latest Node.js",
-  "scripts": {
-    "test": "node bin.cjs ."
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "main": "index.cjs",
-  "bin": {
-    "cfware-lint": "bin.cjs"
-  },
-  "author": "Corey Farrell",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cfware/lint.git"
-  },
-  "homepage": "https://github.com/cfware/lint#readme",
-  "dependencies": {
-    "@babel/core": "^7",
-    "@babel/eslint-parser": "^7",
-    "chalk": "^5",
-    "confusing-browser-globals": "^1",
-    "eslint": "^8",
-    "eslint-formatter-pretty": "^4",
-    "eslint-plugin-eslint-comments": "^3",
-    "eslint-plugin-import": "^2",
-    "eslint-plugin-no-use-extend-native": "^0.5.0",
-    "eslint-plugin-node": "^11",
-    "eslint-plugin-promise": "^6",
-    "eslint-plugin-unicorn": "^43",
-    "is-ci": "^3",
-    "semver": "^7"
-  }
+    "name": "@cfware/lint",
+    "version": "3.0.8",
+    "description": "My linter for latest Node.js",
+    "scripts": {
+        "test": "node bin.js ."
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "type": "module",
+    "main": "index.js",
+    "bin": {
+        "cfware-lint": "bin.js"
+    },
+    "author": "Corey Farrell",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cfware/lint.git"
+    },
+    "homepage": "https://github.com/cfware/lint#readme",
+    "dependencies": {
+        "@babel/core": "^7",
+        "@babel/eslint-parser": "^7",
+        "chalk": "^5",
+        "confusing-browser-globals": "^1",
+        "eslint": "^8",
+        "eslint-formatter-pretty": "^5",
+        "eslint-plugin-eslint-comments": "^3",
+        "eslint-plugin-import": "^2",
+        "eslint-plugin-no-use-extend-native": "^0.5.0",
+        "eslint-plugin-node": "^11",
+        "eslint-plugin-promise": "^6",
+        "eslint-plugin-unicorn": "^48",
+        "is-ci": "^3",
+        "semver": "^7"
+    }
 }
