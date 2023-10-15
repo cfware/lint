@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/cfware/lint/compare/v3.0.8...v4.0.0) (2023-10-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Switch to space indentation
+* Require node.js 18
+* Upgrade eslint-plugin-unicorn to v48
+
+### Features
+
+* Require node.js 18 ([e5c37bb](https://github.com/cfware/lint/commit/e5c37bbee0bde4d6789282bd76ec493e7bcda2e6))
+* Switch to space indentation ([e5c37bb](https://github.com/cfware/lint/commit/e5c37bbee0bde4d6789282bd76ec493e7bcda2e6))
+* Upgrade dependencies ([e5c37bb](https://github.com/cfware/lint/commit/e5c37bbee0bde4d6789282bd76ec493e7bcda2e6))
+* Upgrade eslint-plugin-unicorn to v48 ([e5c37bb](https://github.com/cfware/lint/commit/e5c37bbee0bde4d6789282bd76ec493e7bcda2e6))
+
 ### [3.0.8](https://github.com/cfware/lint/compare/v3.0.7...v3.0.8) (2022-08-27)
 
 
