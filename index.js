@@ -133,7 +133,7 @@ const unicornErrors = {
     'unicorn/switch-case-braces': [2, 'avoid'],
 
     // Use tabs
-    'unicorn/template-indent': [2, {indent: '\t'}]
+    'unicorn/template-indent': [2, {indent: 4}]
 };
 
 const eslintCommentErrors = {
